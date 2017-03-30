@@ -28,7 +28,10 @@ class OpenWeatherMapTests: XCTestCase {
     }
     
     func testParsingCityFieldsWithExpectedValues() {
-        guard let city = Mapper<City>().mapArray(JSONObject: loadJSONFileWithName(JSONFile.city))?.first else { XCTFail(); return }
+        guard let city = Mapper<City>().map(JSONObject: loadJSONFileWithName(JSONFile.city)) else {
+            XCTFail()
+            return
+        }
         
         XCTAssertEqual(city.name, "London")
         XCTAssertEqual(city.responseCode, 200)

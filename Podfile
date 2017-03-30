@@ -8,7 +8,7 @@ target 'OpenWeatherMap' do
   # Pods for OpenWeatherMap
   pod 'AlamofireObjectMapper', '~> 4.1.0'
   pod 'SVProgressHUD', '~> 2.1.2'
-  pod 'SDWebImage', '~> 4.0.0'
+  pod 'SDWebImage', '~> 3.8.1'
   end
 
   target 'OpenWeatherMapTests' do
