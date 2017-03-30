@@ -2,7 +2,7 @@
 //  OpenWeatherMapTests.swift
 //  OpenWeatherMapTests
 //
-//  Created by ctsuser on 3/29/17.
+//  Created by Suneel on 3/29/17.
 //  Copyright © 2017 Suneel. All rights reserved.
 //
 
@@ -32,9 +32,21 @@ class OpenWeatherMapTests: XCTestCase {
             XCTFail()
             return
         }
-        
+
         XCTAssertEqual(city.name, "London")
         XCTAssertEqual(city.responseCode, 200)
+        
+        let cityWeather = city.cityWeather?.first
+        XCTAssertEqual(cityWeather?.description, "light rain")
+        XCTAssertEqual(cityWeather?.icon, "10n")
+        
+        let cityMain = city.cityMain
+        XCTAssertEqual(cityMain?.temperature, 289.24)
+        XCTAssertEqual(cityMain?.humidity, 63)
+        
+        let citySys = city.citySys
+        XCTAssertEqual(citySys?.sunrise, 1490852294)
+        XCTAssertEqual(citySys?.sunset, 1490898726)
     }
     
     /// Load any sample json files from the test bundle

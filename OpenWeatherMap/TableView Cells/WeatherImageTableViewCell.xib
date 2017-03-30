@@ -19,10 +19,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="leP-Ff-3Gu">
-                        <rect key="frame" x="0.0" y="0.0" width="318" height="59"/>
+                        <rect key="frame" x="0.0" y="0.0" width="318" height="55"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Weather Condition" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Brg-Sp-378">
-                                <rect key="frame" x="10" y="15" width="140" height="29"/>
+                                <rect key="frame" x="10" y="15" width="140" height="29.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="sX9-LP-REQ"/>
                                 </constraints>
@@ -31,16 +31,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hrI-T7-Alg">
-                                <rect key="frame" x="258" y="5" width="50" height="50"/>
+                                <rect key="frame" x="258" y="5.5" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="LO5-uk-kqn"/>
                                     <constraint firstAttribute="height" constant="50" id="OS6-c8-Ale"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.97296184496548221" green="0.97296184496548221" blue="0.97296184496548221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="Brg-Sp-378" secondAttribute="bottom" constant="15" id="GQG-gh-B3E"/>
+                            <constraint firstAttribute="bottom" secondItem="Brg-Sp-378" secondAttribute="bottom" constant="10.5" id="GQG-gh-B3E"/>
                             <constraint firstItem="hrI-T7-Alg" firstAttribute="centerY" secondItem="Brg-Sp-378" secondAttribute="centerY" id="UCP-p0-grt"/>
                             <constraint firstItem="Brg-Sp-378" firstAttribute="top" secondItem="leP-Ff-3Gu" secondAttribute="top" constant="15" id="WKM-nb-WT9"/>
                             <constraint firstAttribute="trailing" secondItem="hrI-T7-Alg" secondAttribute="trailing" constant="10" id="sIb-bt-YQO"/>
@@ -48,10 +48,10 @@
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="leP-Ff-3Gu" secondAttribute="trailing" id="3Tv-zb-Xxt"/>
-                    <constraint firstAttribute="bottom" secondItem="leP-Ff-3Gu" secondAttribute="bottom" id="Loq-h9-OPO"/>
+                    <constraint firstAttribute="bottom" secondItem="leP-Ff-3Gu" secondAttribute="bottom" constant="4" id="Loq-h9-OPO"/>
                     <constraint firstItem="leP-Ff-3Gu" firstAttribute="leading" secondItem="iup-i3-UV8" secondAttribute="leading" id="XJD-YE-5KU"/>
                     <constraint firstItem="leP-Ff-3Gu" firstAttribute="top" secondItem="iup-i3-UV8" secondAttribute="top" id="a7z-Ud-plM"/>
                 </constraints>

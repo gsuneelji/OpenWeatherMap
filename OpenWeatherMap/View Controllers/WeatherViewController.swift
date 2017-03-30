@@ -38,6 +38,7 @@ class WeatherViewController: UIViewController {
     func setupTableView() {
         weatherTableView.register(UINib(nibName: Constants.TableViewCells.weatherDetailTableViewCell, bundle: nil), forCellReuseIdentifier: Constants.CellIdentifiers.weatherDetailTableViewCellId)
         weatherTableView.register(UINib(nibName: Constants.TableViewCells.weatherImageTableViewCell, bundle: nil), forCellReuseIdentifier: Constants.CellIdentifiers.weatherImageTableViewCellId)
+        weatherTableView.separatorStyle = .none
     }
     
     // Action when SUBMIT button pressed
@@ -101,7 +102,7 @@ extension WeatherViewController: UITableViewDataSource {
             }
         case .temperature:
             if let city = self.city, let cityWeather = city.cityMain?.temperature {
-                descValue = "\(String(format:"%.1f" ,cityWeather/10))ºC"
+                descValue = "\(String(format:"%.1f", cityWeather - 273.15))ºC"
             }
         case .humidity:
             if let city = self.city, let cityHumidity = city.cityMain?.humidity {
