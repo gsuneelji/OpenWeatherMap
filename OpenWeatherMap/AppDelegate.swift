@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  OpenWeatherMap
 //
-//  Created by ctsuser on 3/29/17.
+//  Created by Suneel on 3/29/17.
 //  Copyright © 2017 Suneel. All rights reserved.
 //
 

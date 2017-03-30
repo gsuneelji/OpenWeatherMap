@@ -7,6 +7,8 @@
 //
 
 import XCTest
+import Alamofire
+import ObjectMapper
 @testable import OpenWeatherMap
 
 class OpenWeatherMapTests: XCTestCase {
@@ -21,16 +23,22 @@ class OpenWeatherMapTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    private struct JSONFile {
+        static let city = "City"
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testParsingCityFieldsWithExpectedValues() {
+        guard let city = Mapper<City>().mapArray(JSONObject: loadJSONFileWithName(JSONFile.city))?.first else { XCTFail(); return }
+        
+        XCTAssertEqual(city.name, "London")
+        XCTAssertEqual(city.responseCode, 200)
     }
     
+    /// Load any sample json files from the test bundle
+    func loadJSONFileWithName(_ filename: String) -> Any {
+        let filePath = Bundle(for: classForCoder).path(forResource: filename, ofType: "json")!
+        let fileURL = URL(fileURLWithPath: filePath)
+        let data = try! Data(contentsOf: fileURL, options: .mappedIfSafe)
+        return try! JSONSerialization.jsonObject(with: data, options: .allowFragments)
+    }
 }
